@@ -1,0 +1,19 @@
+import org.junit.jupiter.api.Test;
+import static org.hamcrest.MatcherAssert.*;
+import static org.hamcrest.CoreMatchers.*;
+
+plublic class CalculatorTest{
+    private final Calculator calculator = new Calculator();
+
+    @Test
+    public void testMultiplication() {
+        int result = calculator.multiplication(5*6);
+        assertThat(result, is(equalTo(30)));
+    }
+
+    @Test
+    public void testDivision() {
+        int result = calculator.divide(6*2);
+        assertThat(result, is(equalTo(3)));
+    }
+}
