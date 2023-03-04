@@ -17,7 +17,11 @@ stages:
           - script: pwd
             displayName: 'Working directory'
 
-          - script: |
-              echo Add other tasks to build, test, and deploy your project.
-              echo See https://aka.ms/yaml
-            displayName: 'Run a multi-line script'
+          - script: ls
+            displayName: 'Print content'
+            
+          - script: sudo apt install cowsay
+            displayName: 'Instalar cowsay'
+            
+          - script: cowsay 'Hola'
+          
